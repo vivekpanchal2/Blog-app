@@ -5,8 +5,7 @@
     <title>Bootstrap demo</title>
   </head>
   <body>
-    <%- include("./partials/navbar.ejs") %>
-    <h1>Hello, world!</h1>
-    <%- include("./partials/script.ejs") %>
+    <%- include("./partials/navbar.ejs") %> <%= JSON.stringify(user) %><%-
+    include("./partials/script.ejs") %>
   </body>
 </html>

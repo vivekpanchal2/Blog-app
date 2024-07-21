@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./partials/head.ejs") %>
+    <title>Bootstrap demo</title>
+  </head>
+  <body>
+    <%- include("./partials/navbar.ejs") %>
+    <div class="container mt-5 border border-5 p-5">
+      <form method="post" action="/signin">
+        <div class="mb-3">
+          <label for="email1" class="form-label">Email address:</label>
+          <input
+            type="email"
+            class="form-control border border-secondary"
+            id="email"
+            name="email"
+            aria-describedby="emailHelp"
+            required
+          />
+          <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control border border-secondary"
+            id="password"
+            name="password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <% if (locals.error) { %>
+        <div class="alert alert-danger my-3" role="alert">
+          <%= locals.error %>
+        </div>
+        <% } %>
+      </form>
+    </div>
+
+    <%- include("./partials/script.ejs") %>
+  </body>
+</html>
