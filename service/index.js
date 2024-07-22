@@ -12,7 +12,7 @@ function createTokenForUser(user) {
   };
 
   const token = JWT.sign(payload, jwt_secret_key);
-  console.log(token);
+
   return token;
 }
 
